@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,31 +93,34 @@
                     <hr>
 
                 </br></br>
-                    <form role="form">
+                    <form role="form" method="POST" action="http://formspree.io/ask.gstree@gmail.com">
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Name</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="name">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control">
+                                <input type="email" class="form-control" name="email">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Phone Number</label>
-                                <input type="tel" class="form-control">
+                                <input type="tel" class="form-control" name="phone">
                             </div>
                             <div class="clearfix"></div>
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-lg-12" name="query">
                                 <label>Your query</label>
                                 <textarea class="form-control" rows="6"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
+                                <input type="hidden" name="save" value="Send" name="submit">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
                         </div>
                     </form>
+
+                    <p><?php if(!empty($message)) echo $message; ?></p>
+                    
                 </div>
             </div>
         </div>
